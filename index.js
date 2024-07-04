@@ -3,14 +3,14 @@ var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var buttonInnerHTML = this.innerHTML;
-    // console.log(buttonInnerHTML);
+   
     makeSound(buttonInnerHTML);
     buttonAnimation(buttonInnerHTML);
   });
 }
 
 document.addEventListener("keypress", function (event) {
-  // console.log(event.key);
+ 
   makeSound(event.key);
   buttonAnimation(event.key);
 });
